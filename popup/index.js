@@ -2,18 +2,22 @@ const popUpButton = document.getElementById("popUpButton");
 const popUpBar = document.getElementById("popUpBar");
 const popUp = document.getElementById("popUp");
 
-popUpButton.innerHTML = "Open Pop Up!"
+let clickCount = 0;
+
 popUpButton.addEventListener("click", ()=>{
-    if (popUp.style.display === "none" && popUpBar.style.display === "none") {
-        popUp.style.display = "block";
-        popUpBar.style.display = "block";
-        popUpButton.innerHTML = "Close Pop Up!"
-    } else {
+    popUp.style.display = "block";
+    popUpBar.style.display = "block";
+    if (clickCount < 1) {
+        let button = document.createElement("button");
+        popUpBar.append(button);
+        button.append("X");
+        button.setAttribute('id', 'closeButton');
+        button.addEventListener("click", ()=> {
         popUp.style.display = "none";
         popUpBar.style.display = "none";
-        popUpButton.innerHTML = "Open Pop Up!"
-
+        });
     }
+    clickCount++;
 })
 
 function draggable(obj) {
