@@ -1,0 +1,19 @@
+
+.green {
+    width: 100px; height: 100px; background-color: rgb(83, 142, 83);
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.paint {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.canvas {
+    width: 800px; height: 500px; background-color: rgb(251, 237, 225);
+    border: 10px solid saddlebrown;
+}
