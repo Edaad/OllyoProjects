@@ -1,6 +1,7 @@
 const popUpButton = document.getElementById("popUpButton");
 const popUpBar = document.getElementById("popUpBar");
 const popUp = document.getElementById("popUp");
+const popUpWrapper = document.getElementById("popup-wrapper");
 
 let clickCount = 0;
 
@@ -42,8 +43,7 @@ function draggable(obj) {
             if (isMoving) {
                 x2 = e.pageX - x1;
                 y2 = e.pageY - y1;
-                obj.style.transform = "translate(" + x2 + "px," + y2 + "px)";
-                popUp.style.transform = "translate(" + x2 + "px," + y2 + "px)";                
+                popUpWrapper.style.transform = "translate(" + x2 + "px," + y2 + "px)";                
             }
         })
     }
