@@ -12,10 +12,10 @@ popUpButton.addEventListener("click", ()=>{
         let button = document.createElement("button");
         popUpBar.append(button);
         button.append("X");
-        button.setAttribute('id', 'closeButton');
+        button.setAttribute('class', 'closeButton');
         button.addEventListener("click", ()=> {
-        popUp.style.display = "none";
-        popUpBar.style.display = "none";
+            popUp.style.display = "none";
+            popUpBar.style.display = "none";
         });
     }
     clickCount++;
