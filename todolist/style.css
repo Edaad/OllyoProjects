@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.h1 {
+    text-align: center;
+}
+
+.list {
+    font-size: medium;
+    margin-bottom: 20px;
+    inline-size: 350px;
+}
+
+.completed {
+    inline-size: 350px;
+}
+
+.task {
+    display: flex;
+    word-break: break-all;
+}
+
+.list-input {
+    margin-bottom: 20px;
+}
+
+.text-field {
+    width: 310px;
+}
+
+.delete-button {
+    margin-left: 5px;
+    align-self: center;
+}
