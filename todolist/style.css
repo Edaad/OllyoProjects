@@ -26,6 +26,11 @@
     word-break: break-all;
 }
 
+.task:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+
 .list-input {
     margin-bottom: 20px;
 }
@@ -35,6 +40,6 @@
 }
 
 .delete-button {
-    margin-left: 5px;
+    margin-left: px;
     align-self: center;
 }
