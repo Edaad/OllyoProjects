@@ -40,6 +40,7 @@ function displayTask(task, divId) {
     let newInputCheckbox = document.createElement("input");
     newInputCheckbox.setAttribute("type", "checkbox");
     newInputCheckbox.setAttribute("id", "$"+task);
+    newInputCheckbox.setAttribute("class", "checkbox");
     newInputDiv.append(newInputCheckbox);
 
     let newInputLabel = document.createElement("label");
