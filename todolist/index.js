@@ -40,7 +40,6 @@ function displayTask(task, divId) {
     let newInputCheckbox = document.createElement("input");
     newInputCheckbox.setAttribute("type", "checkbox");
     newInputCheckbox.setAttribute("id", "$"+task);
-    newInputCheckbox.setAttribute("class", "checkbox");
     newInputDiv.append(newInputCheckbox);
 
     let newInputLabel = document.createElement("label");
@@ -49,20 +48,13 @@ function displayTask(task, divId) {
     newInputLabel.append(task);
     newInputDiv.append(newInputLabel);
 
-    // let pinButton = document.createElement("img");
-    // pinButton.setAttribute("src", "images/pin.png");
-    // pinButton.setAttribute("id", task+"pin");
-    // pinButton.setAttribute("class", "pin-button");
-
     let deleteButton = document.createElement("img");
     deleteButton.setAttribute("src", "images/trash.png");
     deleteButton.setAttribute("id", task+"delete");
     deleteButton.setAttribute("class", "delete-button");
     deleteButton.style.width = "15px"; deleteButton.style.height = "15px";
-    // newInputDiv.append(pinButton);
     newInputDiv.append(deleteButton);
     deleteFunction(deleteButton, task);
-    // pinFunction(pinButton, task);
 
     checkFunction(newInputCheckbox, task);
     setStorageData();
@@ -79,20 +71,6 @@ function deleteFunction(deleteButton, task) {
         setStorageData();
     })
 }
-
-// function pinFunction(pinButton, task) {
-//     pinButton.addEventListener("click", () => {
-//         for (let i = 0; i < tasks.length; i++) {
-//             if (tasks[i].task == task) {
-//                 tasks.unshift(tasks.splice(i, 1)[0]);
-//             }
-//         }
-//         let taskDiv = document.getElementById(task).cloneNode(true);
-//         document.getElementById(task).remove();
-//         list.insertBefore(taskDiv, document.getElementById(tasks[1].task));
-//         setStorageData()
-//     })
-// }
 
 function checkFunction(checkbox, task) {
     checkbox.addEventListener("change", () => {
