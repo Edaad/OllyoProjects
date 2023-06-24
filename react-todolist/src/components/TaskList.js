@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react"
 import SingleTodo from "./tasklistcomps/SingleTodo";
 import TextField from "./tasklistcomps/TextField";
@@ -13,6 +14,8 @@ const TaskList = () => {
         const savedTasks = JSON.parse(getSavedTasks);
         return savedTasks || [];
     });
+    const [showCompleted, setShowCompleted] = useState(false);
+
 
     useEffect(() => {
         localStorage.setItem('tasks', JSON.stringify(todoList));
@@ -27,19 +30,22 @@ const TaskList = () => {
             </div>
             <br />
             <div >
-                {todoList.length > 0 && todoList.filter((todo) => todo.status == '1').map((todo) => (
+                {todoList.length > 0 && todoList.filter((todo) => todo.status === '1').map((todo) => (
                     <SingleTodo todo={todo} todoList={todoList} setTodoList={setTodoList} key={todo.id} />
                 ))}
                 <br></br>
                 <ClearButton setTodoList={setTodoList} />
             </div>
             <div>
-                <h1 className="h1">Completed Tasks <img className="arrow" src={arrowpic} alt="Arrow Icon" /> </h1>
-                <div className="completed">
-                    {todoList.length > 0 && todoList.filter((todo) => todo.status == '0').map((todo) => (
+                <h1 className="h1">Completed Tasks
+                    <input type="checkbox" id="arrowCheck" />
+                    <label className="arrowLabel" for="arrowCheck" onClick={() => setShowCompleted(!showCompleted)}><img src={arrowpic} id="arrow" alt="Arrow Pic" /></label>
+                </h1>
+                {showCompleted && <div className="completed">
+                    {todoList.length > 0 && todoList.filter((todo) => todo.status === '0').map((todo) => (
                         <SingleTodo todo={todo} todoList={todoList} setTodoList={setTodoList} key={todo.id} />
                     ))}
-                </div>
+                </div>}
             </div>
         </div>
     )
