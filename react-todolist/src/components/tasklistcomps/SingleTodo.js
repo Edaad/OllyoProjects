@@ -39,6 +39,7 @@ const SingleTodo = ({ todo, todoList, setTodoList }) => {
             <div onClick={() => setShowDropdown(!showDropdown)} className="task" id={todo.id}>
                 <input type="checkbox" defaultChecked={todo.status === '0' ? true : false} onClick={() => handleCheck(todo.id)} />
                 <span className="task-text">{todo.text}</span>
+                <span className="date-bar">{todo.date && new Date(todo.date).toLocaleDateString()}</span>
                 <img className="delete-button" src={pic} alt="Trash Icon" onClick={() => handleDelete(todo.id)} />
             </div>
             {showDropdown && <Dropdown todo={todo} todoList={todoList} setTodoList={setTodoList} />}

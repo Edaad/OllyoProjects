@@ -5,8 +5,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 const Dropdown = ({ todo, todoList, setTodoList }) => {
     const [date, setDate] = useState(todo.date && new Date(todo.date));
     const [note, setNote] = useState(todo.note);
-    const [textareaheight, setTextareaheight] = useState(1);
-    // const [isActive, setIsActive] = useState(false);
 
     const handleSave = (id) => {
         const newtodoList = todoList.map((todo) => {
@@ -28,11 +26,10 @@ const Dropdown = ({ todo, todoList, setTodoList }) => {
         event.target.style.height = (event.target.scrollHeight) + "px";
     }
 
-
     return (
         <div className="dropdown-container">
             <div>
-                <DatePicker className="date-picker" selected={date} placeholderText="Add date" onChange={(date) => { setDate(date) }} />
+                <DatePicker value={date} className="date-picker" selected={date} placeholderText="Add date" onChange={(date) => { setDate(date) }} />
                 {date !== null && <button className="remove-date" onClick={() => { setDate(null) }}>×</button>}
             </div>
             <div><textarea value={note} className="task-notes" placeholder="Add notes" onChange={(event) => { setNote(event.target.value) }} onKeyUp={textAreaAdjust} /></div>

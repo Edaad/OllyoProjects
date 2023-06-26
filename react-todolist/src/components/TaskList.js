@@ -25,7 +25,7 @@ const TaskList = () => {
         <div>
             <div>
                 <h1 className="h1">To-Do List</h1>
-                <TextField text={text} setText={setText} />
+                <TextField text={text} setText={setText} todoList={todoList} setTodoList={setTodoList} />
                 <AddButton text={text} setText={setText} todoList={todoList} setTodoList={setTodoList} />
             </div>
             <br />
@@ -39,7 +39,9 @@ const TaskList = () => {
             <div>
                 <h1 className="h1">Completed Tasks
                     <input type="checkbox" id="arrowCheck" />
-                    <label className="arrowLabel" for="arrowCheck" onClick={() => setShowCompleted(!showCompleted)}><img src={arrowpic} id="arrow" alt="Arrow Pic" /></label>
+                    <label className="arrowLabel" for="arrowCheck" onClick={() => setShowCompleted(!showCompleted)}>
+                        <img src={arrowpic} id="arrow" alt="Arrow Pic" />
+                    </label>
                 </h1>
                 {showCompleted && <div className="completed">
                     {todoList.length > 0 && todoList.filter((todo) => todo.status === '0').map((todo) => (
