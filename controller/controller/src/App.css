@@ -42,3 +42,9 @@
   border-radius: 10%;
   background-color: rgb(57, 57, 57);
 }
+
+.controller {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
