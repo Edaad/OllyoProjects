@@ -13,7 +13,7 @@ import rootReducer from './reducers'
 
 // console.log(window.__REDUX_DEVTOOLS_EXTENSION__)
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__():compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__:compose;
 
 const store = createStore(rootReducer, composeEnhancers());
 

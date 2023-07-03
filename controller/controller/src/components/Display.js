@@ -11,7 +11,7 @@ const Display = () => {
     return (
         <div>
             <div className="screen">
-                <div className="box" id="box" style={boxPos}/>
+                <div className="box" id="box" style={boxPos} />
             </div>
             <Controller setPosition={setPosition} />
         </div>
