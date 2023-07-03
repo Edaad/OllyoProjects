@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.screen {
+  position: relative;
+  width: screen;
+  height: 500px;
+  background-color: grey;
+}
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: solid;
+  border-width: 3px;
+  background-color: white;
+}
+
+.button {
+  background-color: #c2452c;
+  border-width: 3px;
+  border-color: aliceblue;
+  border-radius: 50%;
+  color: white;
+  padding: 15px 15px;
+  margin: 5px;
+  display: inline-block;
+}
+.button:hover {
+  background-color: #ab4632;
+}
+
+.button-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  height: 140px;
+  width: 145px;
+  border-radius: 10%;
+  background-color: rgb(57, 57, 57);
+}
