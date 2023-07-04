@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import positions from './positions'
+import positions from './positions';
 
 export default combineReducers({
-    positions
+    positions,
 })

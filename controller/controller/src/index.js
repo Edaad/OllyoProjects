@@ -17,7 +17,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DE
 
 const store = createStore(rootReducer, composeEnhancers());
 
-// console.log(store)
+// const data = store.getState();
+// console.log({data})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
