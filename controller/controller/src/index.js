@@ -7,18 +7,10 @@ import { createStore, compose } from 'redux'
 import { Provider } from 'react-redux'
 import rootReducer from './reducers'
 
-
-
-// const store = createStore(rootReducer);
-
-// console.log(window.__REDUX_DEVTOOLS_EXTENSION__)
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__:compose;
 
 const store = createStore(rootReducer, composeEnhancers());
 
-// const data = store.getState();
-// console.log({data})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
