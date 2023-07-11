@@ -1,9 +1,9 @@
 const currentUser = (state = "", action) => {
   switch (action.type) {
     case "CURRENT_USER": {
-      const { payload } = action;
+      const { username } = action;
       return {
-        payload,
+        username,
       };
     }
     default:
