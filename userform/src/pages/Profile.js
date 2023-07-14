@@ -53,8 +53,10 @@ export function Profile() {
         user.password = changeUserData.password;
         user.email = changeUserData.email;
         localStorage.setItem("users", JSON.stringify(users));
-        localStorage.setItem(user.username, localStorage.getItem(prevUsername));
-        localStorage.removeItem(prevUsername);
+        if (prevUsername !== user.username) {
+          localStorage.setItem(user.username, localStorage.getItem(prevUsername));
+          localStorage.removeItem(prevUsername);
+        }
       }
     })
 
