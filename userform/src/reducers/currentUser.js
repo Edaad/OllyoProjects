@@ -6,6 +6,12 @@ const currentUser = (state = "", action) => {
         username,
       };
     }
+    // case "IS_LOGGED_IN": {
+    //   const { payload } = action;
+    //   return {
+    //     payload,
+    //   };
+    // }
     default:
       return state;
   }
