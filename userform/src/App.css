@@ -160,12 +160,6 @@
   background-color: #727fbd;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  /* background-color: #04AA6D;
-  color: white; */
-}
-
 /* Todolist CSS */
 
 .tasklist {

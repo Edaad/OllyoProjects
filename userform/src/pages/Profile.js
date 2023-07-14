@@ -18,11 +18,8 @@ export function Profile() {
       return user;
     }
   });
-  console.log(userData);
 
   const currentUserData = userData.filter(user => user !== undefined)[0];
-
-  console.log(currentUserData);
 
   const [changeUserData, setChangeUserData] = useState({ name: currentUserData.name, username: currentUserData.username, password: currentUserData.password, email: currentUserData.email });
   const [showEdit, setShowEdit] = useState();
