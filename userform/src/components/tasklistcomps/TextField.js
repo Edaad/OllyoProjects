@@ -27,7 +27,7 @@ const TextField = ({ text, setText, todoList, setTodoList }) => {
     }
 
     return (
-        <input className="text-field" value={text} name="todo" type="text" placeholder="Add task" onChange={handleInputChange} onKeyDown={(event) => { handleEnter(event) }} />
+        <input autoComplete="off" className="text-field" value={text} name="todo" type="text" placeholder="Add task" onChange={handleInputChange} onKeyDown={(event) => { handleEnter(event) }} />
     )
 }
 
